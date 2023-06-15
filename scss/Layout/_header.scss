@@ -1,0 +1,127 @@
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-area: header;
+  background-color: var(--accent1);
+  color: var(--accent1Text);
+  padding: 10px 0 10px 0;
+  width: 100vw;
+  align-items: center;
+}
+
+.app-name {
+  grid-column: 1 / 4;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-weight: lighter;
+}
+
+.header-dropdown {
+  position: relative;
+  display: inline-block;
+  grid-column: 7;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ccc;
+  min-width: 12rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15px;
+  font-weight: bolder;
+  color: black;
+  text-align: left;
+  left: -40px;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+li {
+  // padding-top: 1rem;
+}
+
+.bell {
+  grid-column: 7;
+  width: 1.4rem;
+  height: auto;
+  fill: var(--accent1Text);
+  margin-top: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.bell:hover {
+  transform-origin: top;
+  animation-duration: .9s;
+  animation-name: swing;
+}
+@keyframes swing {
+  34% { transform: rotate(15deg);}
+  67% {transform: rotate(-15deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.vertical-line {
+  grid-column: 8;
+  border-left: 1px solid #9ea0bc;
+  height: 100%;
+  width: 50%;
+  margin-left: 0.75rem;
+}
+
+.profile-icon {
+  grid-column: 9;
+  border-radius: 50%;
+  width: 2rem;
+  height: auto;
+}
+
+.username {
+  grid-column: 10 /13;
+  color: var(--accent1Text);
+  font-size: 0.6em;
+  width: 8em;
+  font-weight: 300;
+  padding-left: 0.5rem;
+}
+
+.header-hr {
+  border-top: 1px solid darkgrey;
+}
+// ///////////////////
+// MEDIA QUERIES
+// ///////////////////
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: right;
+    padding: .5rem;
+  }
+  .app-name {
+    width: 100vw;
+  }
+  .bell {
+    width: 1.8rem;
+  }
+  .vertical-line {
+    width: auto;
+    margin-right: .5rem;
+  }
+  .dropdown-content {
+      right: 1rem;
+      left: revert;
+
+  }
+}

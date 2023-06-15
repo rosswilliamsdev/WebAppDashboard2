@@ -1,0 +1,55 @@
+/* Timezone + Save and Cancel Buttons */
+
+// .timezone-container {
+//   position: relative;
+//   width: 100%;
+// }
+
+.select-timezone {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+select {
+  width: 90vw;
+  padding: 10px;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-cancel-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.settings-button {
+  width: 42.5%;
+  padding: 10.5px;
+  margin-bottom: 1rem;
+  background-color: var(--accent1);
+  color: var(--accent3);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.save {
+  background-color: var(--accent1);
+}
+
+.cancel {
+  background-color: #999;
+}
+
+@media (min-width: 768px) {
+  .settings-button {
+    width: 43.5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .settings-button {
+    width: 45.5%;
+  }
+}

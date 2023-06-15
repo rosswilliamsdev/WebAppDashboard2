@@ -1,0 +1,152 @@
+/* New Members & Recent Activity*/
+
+.members-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.members-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.members-text a {
+  color: var(--accent1);
+}
+
+.members-container img {
+  border-radius: 50%;
+  width: 27%;
+  height: auto;
+}
+
+.greater-than {
+  display: none;
+}
+
+
+/* Message User */
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-input {
+  background-color: var(--accent3);
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 0.5rem auto 0.5rem auto;
+  width: 90vw;
+  padding: 0.5rem;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.send-button {
+  background-color: var(--accent1);
+  color: white;
+  border: 1px solid #cccccc;
+  width: 90vw;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+}
+
+/////////////////////////////////
+// MEDIA QUERIES
+/////////////////////////////////
+
+@media (min-width: 768px) {
+  .members-container {
+  flex-direction: row;
+}
+  .members-text{
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: none;
+  }
+  .members-container {
+    justify-content: space-between;
+  }
+ .name-email{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+  }
+  .date {
+    display: flex;
+    justify-content: flex-end;
+    width: 25vw;
+    margin-left: auto;
+  }
+  .date p {
+    width: 50%;
+  }
+  .members-text p {
+    margin: 0;
+  }
+  .user-activity {
+    display: block;
+    text-align: left;
+    width: 75vw;
+  }
+  .greater-than {
+    display: inherit;
+    font-size: 1.5rem;
+    color: var(--accent1);
+    justify-self: flex-end;
+  }
+  .members-container img {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-wrapper {
+    display: grid;
+    grid-template-areas: 
+    "members activity"
+    "message settings";
+  }
+  .members {
+    grid-area: members;
+    width: 45vw;
+  }
+  .members-container {
+    height: 5rem;
+  }
+
+  .date {
+    width: auto;
+  }
+
+  .activity {
+    grid-area: activity;
+    width: 45vw;
+  }
+  .message {
+    grid-area: message;
+    width: 45vw;
+    margin: auto;
+  }
+  .settings {
+    grid-area: settings;
+    width: 45vw;
+  }
+  .message-input,
+  .send-button {
+    width: 45vw;
+  }
+}

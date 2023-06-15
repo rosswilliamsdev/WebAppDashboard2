@@ -1,0 +1,17 @@
+.alert-banner {
+  display: flex;
+  background-color: var(--accent1);
+  color: var(--accent1Text);
+  margin: 0.75rem;
+  border-radius: 5px;
+  padding: 0.15rem;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.alert-banner-close {
+  margin: auto;
+  padding-left: 0.75rem;
+  font-weight: bold;
+}
+
